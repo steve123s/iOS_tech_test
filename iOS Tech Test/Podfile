@@ -7,5 +7,6 @@ target 'iOS Tech Test' do
 
   # Pods for iOS Tech Test
   pod 'Alamofire'
+  pod 'AlamofireObjectMapper', '~> 5.2'
   
 end

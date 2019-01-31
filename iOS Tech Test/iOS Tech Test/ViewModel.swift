@@ -15,7 +15,6 @@ class ViewModel {
     func getISSPosition(completion: @escaping (_ response: ISSResponse?) -> ()) {
         
         Alamofire.request("http://api.open-notify.org/iss-now.json").responseObject { (response: DataResponse<ISSResponse>) in
-            
             guard let response = response.result.value else {
                 completion(nil)
                 return

@@ -12,6 +12,8 @@ import MapKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
+    // iOSTechTestLabel was asociated with non-existing var
+    @IBOutlet weak var iOSTechTestLabel: UILabel!
     
     var viewModel: ViewModel!
     var issAnnotation: ISSAnnotation?
@@ -19,8 +21,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view, typically from a nib.
-        
+        // viewModel initialization was missing
+        viewModel = ViewModel()
         viewModel.getISSPosition { (response) in
             
             guard let coordinate = response?.position?.coordinate else { return }

@@ -34,7 +34,8 @@ class ISSPosition: Mappable {
     var coordinate: CLLocationCoordinate2D? {
         guard let latitudeStr = latitude, let longitudeStr = longitude else { return nil }
         guard let lat = Double(latitudeStr), let lon = Double(longitudeStr) else { return nil }
-        return nil
+        // Var was returning nil instead of a CLLocationCoordinate2D
+        return CLLocationCoordinate2D(latitude: lat, longitude: lon)
     }
     
     
