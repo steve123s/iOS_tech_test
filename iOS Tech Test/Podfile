@@ -6,7 +6,7 @@ target 'iOS Tech Test' do
   use_frameworks!
 
   # Pods for iOS Tech Test
-  pod 'Alamofire'
+  pod 'Alamofire', '~> 4.7.3'
   pod 'AlamofireObjectMapper', '~> 5.2'
   
 end
