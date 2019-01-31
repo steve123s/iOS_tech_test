@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS Tech Test/ViewController.swift"
+            timestampString = "570600196.647369"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS Tech Test/ViewController.swift"
+            timestampString = "570600196.6475199"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS Tech Test/ViewController.swift"
+            timestampString = "570600196.647632"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS Tech Test/ViewController.swift"
+            timestampString = "570600196.6477391"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS Tech Test/ViewModel.swift"
+            timestampString = "570600196.647881"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "getISSPosition(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Tech_Test.ViewModel.getISSPosition(completion: (Swift.Optional&lt;iOS_Tech_Test.ISSResponse&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "iOS Tech Test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/daniel/Desktop/gitUrbvanTest/iOS%20Tech%20Test/iOS%20Tech%20Test/ViewModel.swift"
+                  timestampString = "570600197.113955"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;iOS_Tech_Test.ISSResponse&gt;) -&gt; () in iOS_Tech_Test.ViewModel.getISSPosition(completion: (Swift.Optional&lt;iOS_Tech_Test.ISSResponse&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "iOS Tech Test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/daniel/Desktop/gitUrbvanTest/iOS%20Tech%20Test/iOS%20Tech%20Test/ViewModel.swift"
+                  timestampString = "570600197.116383"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS Tech Test/ViewModel.swift"
+            timestampString = "570600196.6480269"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "getISSPosition(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS Tech Test/ViewModel.swift"
+            timestampString = "570600196.648098"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "getISSPosition(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS Tech Test/ISSAnnotation.swift"
+            timestampString = "570593816.205403"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "init(coordinate:title:subtitle:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Tech_Test.ISSAnnotation.__allocating_init(coordinate: __C.CLLocationCoordinate2D, title: Swift.String, subtitle: Swift.String) -&gt; iOS_Tech_Test.ISSAnnotation"
+                  moduleName = "iOS Tech Test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/daniel/Desktop/gitUrbvanTest/iOS%20Tech%20Test/iOS%20Tech%20Test/ISSAnnotation.swift"
+                  timestampString = "570600197.1328779"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Tech_Test.ISSAnnotation.init(coordinate: __C.CLLocationCoordinate2D, title: Swift.String, subtitle: Swift.String) -&gt; iOS_Tech_Test.ISSAnnotation"
+                  moduleName = "iOS Tech Test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/daniel/Desktop/gitUrbvanTest/iOS%20Tech%20Test/iOS%20Tech%20Test/ISSAnnotation.swift"
+                  timestampString = "570600197.135332"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS Tech Test/ISSAnnotation.swift"
+            timestampString = "570593816.220646"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "init(annotation:reuseIdentifier:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Tech_Test.ISSAnnotationView.__allocating_init(annotation: Swift.Optional&lt;__C.MKAnnotation&gt;, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; iOS_Tech_Test.ISSAnnotationView"
+                  moduleName = "iOS Tech Test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/daniel/Desktop/gitUrbvanTest/iOS%20Tech%20Test/iOS%20Tech%20Test/ISSAnnotation.swift"
+                  timestampString = "570600197.141816"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Tech_Test.ISSAnnotationView.init(annotation: Swift.Optional&lt;__C.MKAnnotation&gt;, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; iOS_Tech_Test.ISSAnnotationView"
+                  moduleName = "iOS Tech Test"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/daniel/Desktop/gitUrbvanTest/iOS%20Tech%20Test/iOS%20Tech%20Test/ISSAnnotation.swift"
+                  timestampString = "570600197.144478"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
