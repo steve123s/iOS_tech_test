@@ -30,11 +30,17 @@ class ISSAnnotationView: MKAnnotationView {
     
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
-        
+        // Make annotationView display default bubble with title and description. Previously was ignoring them.
+        self.canShowCallout = true
         let pinImageView = UIImageView(frame: CGRect(x: -15, y: -15, width: 30, height: 30))
         pinImageView.image = UIImage(named: "space-station")
         pinImageView.contentMode = .scaleAspectFit
+        let pinTitleLabel = UILabel(frame: CGRect(x: -15, y: 15, width: 30, height: 20))
+        pinTitleLabel.text = annotation?.title ?? ""
+        pinTitleLabel.textAlignment = .center
+        
         addSubview(pinImageView)
+        addSubview(pinTitleLabel)
 
     }
     

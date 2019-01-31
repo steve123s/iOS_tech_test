@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // mapView delegate was missing
+        mapView.delegate = self
         
         // viewModel initialization was missing
         viewModel = ViewModel()
@@ -50,5 +52,7 @@ extension ViewController: MKMapViewDelegate {
         }
         return nil
     }
+    
+    
     
 }
