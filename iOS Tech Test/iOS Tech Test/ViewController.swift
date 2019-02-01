@@ -34,10 +34,17 @@ class ViewController: UIViewController {
         
         // viewModel initialization was missing
         viewModel = ViewModel()
+        // schedules a timer to get position every 15 seconds with infinite repetition.
+        _ = Timer.scheduledTimer(timeInterval: 15, target: self, selector: #selector(ViewController.execute), userInfo: nil, repeats: true)
+        
+    }
+    
+    @objc func execute() {
         viewModel.getISSPosition { (response) in
             
             guard let coordinate = response?.position?.coordinate else { return }
-            
+            // Set annotation coordinate as the center of mapView
+            self.mapView.setCenter(coordinate, animated: true)
             if self.issAnnotation == nil {
                 self.issAnnotation = ISSAnnotation(coordinate: coordinate, title: "ISS", subtitle: "Current Location")
                 self.mapView.addAnnotation(self.issAnnotation!)
@@ -46,7 +53,6 @@ class ViewController: UIViewController {
             }
             
         }
-        
     }
 
 
