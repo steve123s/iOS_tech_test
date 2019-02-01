@@ -9,6 +9,15 @@
 import UIKit
 import MapKit
 
+/*
+ Clase ViewController, se ejecuta como controlador de vista del mapa (vista inicial).
+ Tiene 2 outlets hacia la vista del mapa y la label del título.
+ También cuenta con 2 variables que hacen referencia a ViewModel y ISSAnnotation
+ En viewDidLoad asignamos como delegado de mapView a la misma clase para que utilize la extensión para crear las vistas custom para las annotations.
+ Posteriormente inicializamos viewModel y utilizamos su método getISSPosition.
+ Si se ejecuta con éxito nos devolverá una "respuesta" de tipo ISSResponse. Obtenemos y nos aseguramos que exista una coordenada a partir de su posición y si es el caso, si no hay ya una annotation, se inicializa una nueva ISSAnnotation y se añade a nuestra mapView. Si ya hay una annotation, simplemente actualiza su coordenada.
+ La vunción func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? de la extensión se ejecuta en el momento en el que se va a mostrar nuestra annotation en el mapa. Si no se implementa, simplemente se mostrará un pin con estilo default.
+ */
 class ViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!

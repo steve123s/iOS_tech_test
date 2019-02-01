@@ -9,6 +9,10 @@
 import ObjectMapper
 import CoreLocation
 
+/*
+ ISSResponse es el objeto al que se va a mapear la respuesta de la API. Hereda de Mappable porque ObjectMapper va a hacer el mapeo automáticamente.
+ Tiene 3 parámetros, de los cuales el último es un ISSPosition que se va a devolver una coordenada a partir de las coordenadas de latitud y longitud de la respuesta. ISSPsition también debe heredar de Mappable porque en ella se mapea la latitud y longitud desde la API. La función mapping es la que lo hace posible, en ella podemos ver que se pasan las llaves del JSON para obtener su valor.
+ */
 class ISSResponse: Mappable {
     
     var message: String? = nil

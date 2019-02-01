@@ -8,8 +8,18 @@
 
 import MapKit
 
+/*
+ ISSAnnotation se va a encargar de crear las anotaciones que veremos en el mapa.
+ Cuenta con un título, subtítulo y coordenada.
+ Es importante ver que la variable coordinate tiene el modificador "dynamic".
+ dynamic hace referencia al dynamic dispatch de Objective-C, por lo tanto implícitamente también es un @objc y se utiliza porque la coordenada estará cambiando en tiempo de ejecución y para estos casos funciona mejor el dynamic dispatch de Objective-C que el static de Swift.
+ 
+ Como queremos vistas personalizadas vamos a necesitar otra clase para crearlas. ISSAnnotationView se encargará de ello.
+ En esta clase creamos una vista con una imagen y un título como subvistas. Y se creará una cuando el delegado de MKMapView llame a la función de annotation en nuestro ViewController.
+ */
 class ISSAnnotation: NSObject, MKAnnotation {
     
+    // coordinat
     dynamic var coordinate: CLLocationCoordinate2D
     var title: String?
     var subtitle: String?
