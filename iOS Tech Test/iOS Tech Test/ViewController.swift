@@ -34,14 +34,14 @@ class ViewController: UIViewController {
         
         // viewModel initialization was missing
         viewModel = ViewModel()
-        // schedules a timer to get position every 15 seconds with infinite repetition.
-        _ = Timer.scheduledTimer(timeInterval: 15, target: self, selector: #selector(ViewController.execute), userInfo: nil, repeats: true)
-        
+        // First data fetch
+        fetchData()
+        // Then schedules a timer to get position every 15 seconds with infinite repetition.
+        _ = Timer.scheduledTimer(timeInterval: 15, target: self, selector: #selector(ViewController.fetchData), userInfo: nil, repeats: true)
     }
     
-    @objc func execute() {
+    @objc func fetchData() {
         viewModel.getISSPosition { (response) in
-            
             guard let coordinate = response?.position?.coordinate else { return }
             // Set annotation coordinate as the center of mapView
             self.mapView.setCenter(coordinate, animated: true)
@@ -51,11 +51,9 @@ class ViewController: UIViewController {
             } else {
                 self.issAnnotation?.coordinate = coordinate
             }
-            
         }
     }
-
-
+    
 }
 
 
