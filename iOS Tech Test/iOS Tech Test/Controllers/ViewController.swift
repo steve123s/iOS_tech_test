@@ -74,18 +74,10 @@ class ViewController: UIViewController {
         // Start new pulse animations
         if let annotation = mapView.annotations.first as? ISSAnnotation {
             if let annotationView = mapView.view(for: annotation) as? ISSAnnotationView {
-                annotationView.pinImageView.layer.sublayers?.removeAll()
-                annotationView.createPulse(around: annotationView.pinImageView )
-            }
-        }
-    }
-    
-    override func viewDidDisappear(_ animated: Bool) {
-        // Stop and delete pulse animations
-        if let annotation = mapView.annotations.first as? ISSAnnotation {
-            if let annotationView = mapView.view(for: annotation) as? ISSAnnotationView {
                 annotationView.layer.removeAllAnimations()
                 annotationView.pulseLayers.removeAll()
+                annotationView.pinImageView.layer.sublayers?.removeAll()
+                annotationView.createPulse(around: annotationView.pinImageView )
             }
         }
     }
