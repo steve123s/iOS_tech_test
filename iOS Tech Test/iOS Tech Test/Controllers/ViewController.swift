@@ -22,7 +22,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     // iOSTechTestLabel was asociated with non-existing var
-    @IBOutlet weak var iOSTechTestLabel: UILabel!
+    //@IBOutlet weak var iOSTechTestLabel: UILabel!
     
     var viewModel: ViewModel!
     var issAnnotation: ISSAnnotation?
@@ -38,6 +38,10 @@ class ViewController: UIViewController {
         fetchData()
         // Then schedules a timer to get position every 15 seconds with infinite repetition.
         _ = Timer.scheduledTimer(timeInterval: 15, target: self, selector: #selector(ViewController.fetchData), userInfo: nil, repeats: true)
+        
+        // Make Navigation Bar invisible
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
     }
     
     @objc func fetchData() {

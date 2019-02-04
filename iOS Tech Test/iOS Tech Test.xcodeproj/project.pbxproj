@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65BD9F832207D2F0003EEB6F /* ISSHistory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65BD9F822207D2F0003EEB6F /* ISSHistory.storyboard */; };
+		65BD9F882207D4E7003EEB6F /* ISSHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BD9F862207D4E7003EEB6F /* ISSHistoryTableViewCell.swift */; };
+		65BD9F892207D4E7003EEB6F /* ISSHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65BD9F872207D4E7003EEB6F /* ISSHistoryTableViewCell.xib */; };
+		65BD9F902207D593003EEB6F /* ISSHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BD9F8F2207D593003EEB6F /* ISSHistoryTableViewController.swift */; };
 		A075CD9920879B3C00B7270F /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A075CD9820879B3C00B7270F /* ViewModel.swift */; };
 		A07CB0C02085686400BAB18E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07CB0BF2085686400BAB18E /* AppDelegate.swift */; };
 		A07CB0C22085686400BAB18E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07CB0C12085686400BAB18E /* ViewController.swift */; };
@@ -20,6 +24,10 @@
 
 /* Begin PBXFileReference section */
 		155F1E12DAFF977A14C46531 /* Pods-iOS Tech Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS Tech Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS Tech Test/Pods-iOS Tech Test.release.xcconfig"; sourceTree = "<group>"; };
+		65BD9F822207D2F0003EEB6F /* ISSHistory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ISSHistory.storyboard; sourceTree = "<group>"; };
+		65BD9F862207D4E7003EEB6F /* ISSHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		65BD9F872207D4E7003EEB6F /* ISSHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ISSHistoryTableViewCell.xib; sourceTree = "<group>"; };
+		65BD9F8F2207D593003EEB6F /* ISSHistoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSHistoryTableViewController.swift; sourceTree = "<group>"; };
 		9A8F3966637605D8947740A1 /* Pods-iOS Tech Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS Tech Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOS Tech Test/Pods-iOS Tech Test.debug.xcconfig"; sourceTree = "<group>"; };
 		A075CD9820879B3C00B7270F /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		A07CB0BC2085686400BAB18E /* iOS Tech Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Tech Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +63,43 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		65BD9F8C2207D51D003EEB6F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A09E9E7120879CE300338F5D /* ISSNow.swift */,
+				A075CD9820879B3C00B7270F /* ViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		65BD9F8D2207D528003EEB6F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A09E9E732087A1BA00338F5D /* ISSAnnotation.swift */,
+				65BD9F862207D4E7003EEB6F /* ISSHistoryTableViewCell.swift */,
+				65BD9F872207D4E7003EEB6F /* ISSHistoryTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		65BD9F8E2207D530003EEB6F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A07CB0C12085686400BAB18E /* ViewController.swift */,
+				65BD9F8F2207D593003EEB6F /* ISSHistoryTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		65BD9F912207D5A6003EEB6F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A07CB0C32085686400BAB18E /* Main.storyboard */,
+				65BD9F822207D2F0003EEB6F /* ISSHistory.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		A07CB0B32085686400BAB18E = {
 			isa = PBXGroup;
 			children = (
@@ -77,11 +122,10 @@
 			isa = PBXGroup;
 			children = (
 				A07CB0BF2085686400BAB18E /* AppDelegate.swift */,
-				A07CB0C12085686400BAB18E /* ViewController.swift */,
-				A075CD9820879B3C00B7270F /* ViewModel.swift */,
-				A09E9E7120879CE300338F5D /* ISSNow.swift */,
-				A09E9E732087A1BA00338F5D /* ISSAnnotation.swift */,
-				A07CB0C32085686400BAB18E /* Main.storyboard */,
+				65BD9F912207D5A6003EEB6F /* Storyboards */,
+				65BD9F8E2207D530003EEB6F /* Controllers */,
+				65BD9F8D2207D528003EEB6F /* Views */,
+				65BD9F8C2207D51D003EEB6F /* Models */,
 				A07CB0C62085686500BAB18E /* Assets.xcassets */,
 				A07CB0C82085686500BAB18E /* LaunchScreen.storyboard */,
 				A07CB0CB2085686500BAB18E /* Info.plist */,
@@ -159,8 +203,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A07CB0CA2085686500BAB18E /* LaunchScreen.storyboard in Resources */,
+				65BD9F832207D2F0003EEB6F /* ISSHistory.storyboard in Resources */,
 				A07CB0C72085686500BAB18E /* Assets.xcassets in Resources */,
 				A07CB0C52085686400BAB18E /* Main.storyboard in Resources */,
+				65BD9F892207D4E7003EEB6F /* ISSHistoryTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,7 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A07CB0C22085686400BAB18E /* ViewController.swift in Sources */,
+				65BD9F902207D593003EEB6F /* ISSHistoryTableViewController.swift in Sources */,
 				A075CD9920879B3C00B7270F /* ViewModel.swift in Sources */,
+				65BD9F882207D4E7003EEB6F /* ISSHistoryTableViewCell.swift in Sources */,
 				A09E9E7220879CE300338F5D /* ISSNow.swift in Sources */,
 				A09E9E742087A1BA00338F5D /* ISSAnnotation.swift in Sources */,
 				A07CB0C02085686400BAB18E /* AppDelegate.swift in Sources */,
