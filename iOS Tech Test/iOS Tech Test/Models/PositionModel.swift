@@ -24,9 +24,8 @@ struct PositionModel {
         let currentDateTime = Date()
         // Initialize date formatter and set the style
         let formatter = DateFormatter()
-        // Ej: "10:52:30 PM"
         formatter.timeStyle = .medium
-        formatter.dateStyle = .none
+        formatter.dateStyle = .short
         return formatter.string(from: currentDateTime)
     }
     

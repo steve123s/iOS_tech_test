@@ -29,7 +29,7 @@ class ISSHistoryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ISSHistoryCell", for: indexPath)
         let ISSPosition = ISSPositions[indexPath.row]
-        cell.textLabel?.text = "Time: \(ISSPosition.timeObtained)"
+        cell.textLabel?.text = "Date & Time: \(ISSPosition.timeObtained)"
         cell.detailTextLabel?.text = "Latitude: \(ISSPosition.position.latitude) Longitude: \(ISSPosition.position.longitude)"
         return cell
     }
