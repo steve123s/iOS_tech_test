@@ -23,43 +23,74 @@ class ViewController: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     // iOSTechTestLabel was asociated with non-existing var
     //@IBOutlet weak var iOSTechTestLabel: UILabel!
-    
-    var viewModel: ViewModel!
+    var ISSPositions = [PositionModel]()
     var issAnnotation: ISSAnnotation?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // mapView delegate was missing
         mapView.delegate = self
-        
-        // viewModel initialization was missing
-        viewModel = ViewModel()
         // First data fetch
         fetchData()
         // Then schedules a timer to get position every 15 seconds with infinite repetition.
         _ = Timer.scheduledTimer(timeInterval: 15, target: self, selector: #selector(ViewController.fetchData), userInfo: nil, repeats: true)
-        
         // Make Navigation Bar invisible
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
     }
     
     @objc func fetchData() {
+        let viewModel = ViewModel()
         viewModel.getISSPosition { (response) in
             guard let coordinate = response?.position?.coordinate else { return }
-            // Set annotation coordinate as the center of mapView
-            self.mapView.setCenter(coordinate, animated: true)
+            // Set annotation coordinate as the center of mapView only for the first annotation
+            if self.ISSPositions.isEmpty {
+                self.mapView.setCenter(coordinate, animated: true)
+            }
+            // Save new position to array
+            self.ISSPositions.append(PositionModel(position: coordinate))
             if self.issAnnotation == nil {
                 self.issAnnotation = ISSAnnotation(coordinate: coordinate, title: "ISS", subtitle: "Current Location")
                 self.mapView.addAnnotation(self.issAnnotation!)
             } else {
-                self.issAnnotation?.coordinate = coordinate
+                // Animate change to new coordinate
+                UIView.animate(withDuration: 1, animations: {
+                    self.issAnnotation?.coordinate = coordinate
+                })
+            }
+        }
+    }
+ 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Pass updated ISSPositions to TableVC
+        if segue.identifier == "ISSHistorySegue" {
+            let navigationController = segue.destination as! UINavigationController
+            let tvc = navigationController.viewControllers.first as! ISSHistoryTableViewController
+            tvc.ISSPositions = ISSPositions
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // Start new pulse animations
+        if let annotation = mapView.annotations.first as? ISSAnnotation {
+            if let annotationView = mapView.view(for: annotation) as? ISSAnnotationView {
+                annotationView.pinImageView.layer.sublayers?.removeAll()
+                annotationView.createPulse(around: annotationView.pinImageView )
+            }
+        }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        // Stop and delete pulse animations
+        if let annotation = mapView.annotations.first as? ISSAnnotation {
+            if let annotationView = mapView.view(for: annotation) as? ISSAnnotationView {
+                annotationView.layer.removeAllAnimations()
+                annotationView.pulseLayers.removeAll()
             }
         }
     }
     
 }
-
 
 extension ViewController: MKMapViewDelegate {
     
@@ -69,7 +100,4 @@ extension ViewController: MKMapViewDelegate {
         }
         return nil
     }
-    
-    
-    
 }

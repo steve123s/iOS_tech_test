@@ -34,6 +34,8 @@ class ISSAnnotation: NSObject, MKAnnotation {
 
 class ISSAnnotationView: MKAnnotationView {
     var pulseLayers = [CAShapeLayer]()
+    // Space station imageView
+    let pinImageView = UIImageView(frame: CGRect(x: -15, y: -15, width: 30, height: 30))
     
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -43,8 +45,7 @@ class ISSAnnotationView: MKAnnotationView {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
         // Make annotationView display default bubble with title and description. Previously was ignoring them.
         self.canShowCallout = true
-        // Space station imageView
-        let pinImageView = UIImageView(frame: CGRect(x: -15, y: -15, width: 30, height: 30))
+        
         pinImageView.image = UIImage(named: "space-station")
         pinImageView.contentMode = .scaleAspectFit
         // titleLabel view
@@ -80,12 +81,12 @@ class ISSAnnotationView: MKAnnotationView {
                         x: image.frame.size.width/2.0,
                         y: image.frame.size.width/2.0)
             // Add CALayer to image and to pulseLayers array
-            image.layer.addSublayer(pulseLayer)
             pulseLayers.append(pulseLayer)
         }
         // Animate every pulse created with difference of 0.2 between them
         for (index,_) in pulseLayers.enumerated() {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2*Double(index+1)) {
+                image.layer.addSublayer(self.pulseLayers[index])
                 self.animatePulseAt(index)
             }
         }

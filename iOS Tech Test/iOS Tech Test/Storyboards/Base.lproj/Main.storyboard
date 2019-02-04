@@ -35,7 +35,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" image="past-time" id="3n5-ZN-3g7">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="P1R-JP-R9Y" kind="popoverPresentation" popoverAnchorBarButtonItem="3n5-ZN-3g7" id="QGu-fD-4hO">
+                                <segue destination="P1R-JP-R9Y" kind="popoverPresentation" identifier="ISSHistorySegue" popoverAnchorBarButtonItem="3n5-ZN-3g7" id="QGu-fD-4hO">
                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                 </segue>
                             </connections>
